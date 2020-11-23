@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "HexTile",
+"language": "GDScript",
+"path": "res://Scripts/HexTile.gd"
+} ]
 _global_script_class_icons={
-
+"HexTile": ""
 }
 
 [application]
@@ -18,6 +23,10 @@ _global_script_class_icons={
 config/name="hextile-demo"
 run/main_scene="res://Objects/Test.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+TileManager="*res://Scripts/TileManager.gd"
 
 [rendering]
 

@@ -1,12 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scripts/TileManager.gd" type="Script" id=1]
+[ext_resource path="res://Objects/CustomButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objects/HexagonDisableArea.tscn" type="PackedScene" id=2]
 
-[node name="Test" type="Node2D" groups=[
+[node name="Node" type="Node"]
+
+[node name="Test" type="Node2D" parent="." groups=[
 "TileManager",
 ]]
-script = ExtResource( 1 )
-outline = false
 
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
+[node name="CustomButton" parent="." instance=ExtResource( 1 )]
+position = Vector2( 300, 300 )
+
+[node name="HexagonDisableArea" parent="." instance=ExtResource( 2 )]
+position = Vector2( 683.851, 332.717 )

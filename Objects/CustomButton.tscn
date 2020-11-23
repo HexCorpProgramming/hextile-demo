@@ -1,22 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Objects/Tile.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/HexButton.gd" type="Script" id=1]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
-points = PoolVector2Array( 0, -10, 8.66025, 5, -8.66025, 5, 0, 0, 0, 0, 0, 0 )
-
-[sub_resource type="StyleBoxEmpty" id=2]
-
-[sub_resource type="StyleBoxEmpty" id=3]
-
-[sub_resource type="StyleBoxEmpty" id=4]
-
-[sub_resource type="StyleBoxEmpty" id=5]
-
-[sub_resource type="StyleBoxEmpty" id=6]
+points = PoolVector2Array( 0, 10, 8.66025, 5, 8.66, -5, 0, -10, -8.66, -5, -8.66, 5 )
 
 [node name="Area2D" type="Area2D" groups=[
 "Tile",
+"Assimilate",
 ]]
 script = ExtResource( 1 )
 
@@ -29,7 +20,7 @@ antialiased = true
 texture_scale = Vector2( 0.1, 0.1 )
 polygon = PoolVector2Array( 0, 10, 8.66, 5, 8.66, -5, 0, -10, -8.66, -5, -8.66, 5 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="NewColorTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
 
@@ -40,14 +31,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -32.0
+margin_left = -45.0
 margin_top = -10.0
-margin_right = 32.0
+margin_right = 45.0
 margin_bottom = 10.0
-custom_styles/hover = SubResource( 2 )
-custom_styles/pressed = SubResource( 3 )
-custom_styles/focus = SubResource( 4 )
-custom_styles/disabled = SubResource( 5 )
-custom_styles/normal = SubResource( 6 )
-text = "OBEY"
-clip_text = true
+text = "CUSTOM!!!!"
